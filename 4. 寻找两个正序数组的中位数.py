@@ -27,33 +27,28 @@ class Solution:
         def getKthElement(k):
             index1, index2 = 0, 0
             while True:
-                # 特殊情况
                 if index1 == m:
                     return nums2[index2 + k - 1]
-                if index2 == n:
+                elif index2 == n:
                     return nums1[index1 + k - 1]
-                if k == 1:
+                elif k == 1:
                     return min(nums1[index1], nums2[index2])
-
-                # 正常情况
-                newIndex1 = min(index1 + k // 2 - 1, m - 1)
-                newIndex2 = min(index2 + k // 2 - 1, n - 1)
-                pivot1, pivot2 = nums1[newIndex1], nums2[newIndex2]
+                newindex1, newindex2 = min(index1 + k // 2 - 1, m - 1), min(index2 + k // 2 - 1, n - 1)
+                pivot1, pivot2 = nums1[newindex1], nums2[newindex2]
                 if pivot1 <= pivot2:
-                    k -= newIndex1 - index1 + 1
-                    index1 = newIndex1 + 1
+                    k -= newindex1 - index1 + 1
+                    index1 = newindex1 + 1
                 else:
-                    k -= newIndex2 - index2 + 1
-                    index2 = newIndex2 + 1
+                    k -= newindex2 - index2 + 1
+                    index2 = newindex2 + 1
 
         m, n = len(nums1), len(nums2)
         totalLength = m + n
-        if totalLength % 2 == 1:
-            return getKthElement(totalLength// 2+1)
+        if totalLength % 2:
+            return getKthElement(totalLength // 2 + 1)
         else:
             return (getKthElement(totalLength // 2) + getKthElement(totalLength // 2 + 1)) / 2
 
 
-
 obj = Solution()
-print(obj.findMedianSortedArrays([1, 3], [2, 4, 8, 9, 10]))
+print(obj.findMedianSortedArrays([1, 3], [2, 4, 5, 8, 9, 10]))

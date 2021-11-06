@@ -22,7 +22,7 @@ class Solution:
         return self.res
 
     def preorderTraversal(self, root):
-        # 前序遍历-迭代-LC144_二叉树的前序遍历
+        # 前序遍历-迭代-LC144_二叉树的前序遍历：右左中空
         res = []
         if not root: return res
         stack = [root]
@@ -39,7 +39,7 @@ class Solution:
         return res
 
     def postorderTraversal(self, root):
-        # 后序遍历-迭代-LC145_二叉树的后序遍历
+        # 后序遍历-迭代-LC145_二叉树的后序遍历：中空右左
         res = []
         if not root: return res
         stack = [root]
@@ -51,7 +51,7 @@ class Solution:
         return res[::-1]
 
     def inorderTraversal(self, root):
-        # 中序遍历-迭代-LC94_二叉树的中序遍历
+        # 中序遍历-迭代-LC94_二叉树的中序遍历：右中空左
         res = []
         if not root: return res
         stack = [root]
@@ -96,7 +96,6 @@ class Solution:
         return results[::-1]
 
     # def invertTree(self, ):
-
 
 
 obj = Solution()

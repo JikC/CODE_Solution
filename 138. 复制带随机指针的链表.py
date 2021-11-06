@@ -8,17 +8,18 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
-        if not head: return None
-        dummy = Node(-1)
+        if not head: return head
+        dummy = None(-1)
         dummy.next = head
-        while head:  #
+        while head:
             node = Node(head.val)
             node.next = head.next
             head.next = node
             head = node.next
         head = dummy.next
         while head:
-            head.next.random = head.random.next
+            if head.random:
+                head.next.random = head.random
             head = head.next.next
         head = dummy.next
         res = head.next

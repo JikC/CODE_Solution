@@ -72,7 +72,7 @@ a2.left, a2.right = a4, a5
 a3.right = a6
 
 ob = PrintTree()
-print(ob.levelOrder(a1))
+print(ob.levelOrder(a1))  # [5, 3, 6, 2, 4, 7]
 obj = Solution()
 result = obj.deleteNode(a1, 3)
 print(ob.levelOrder(result))

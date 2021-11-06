@@ -24,9 +24,6 @@ class Solution:
             self.array[i], self.array[swapidx] = self.array[swapidx], self.array[i]
         return self.array
 
-
-
-
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(nums)
 # param_1 = obj.reset()

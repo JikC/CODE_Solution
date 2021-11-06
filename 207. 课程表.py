@@ -27,4 +27,4 @@ class Solution:
 
 
 obj = Solution()
-print(obj.canFinish(2, [[0, 1]]))
+print(obj.canFinish(2, [[0, 1],[]]))
