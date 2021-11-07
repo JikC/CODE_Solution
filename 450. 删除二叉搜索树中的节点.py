@@ -36,12 +36,12 @@ class Solution:
                 return None
             elif not root.right:  # 第三种情况：其左孩子为空，右孩子不为空，删除节点，右孩子补位 ，返回右孩子为根节点
                 tmp = root
-                root = root.right
+                root = root.left
                 del tmp
                 return root
             elif not root.left:  # 第四种情况：其右孩子为空，左孩子不为空，删除节点，左孩子补位，返回左孩子为根节点
                 tmp = root
-                root = root.left
+                root = root.right
                 del tmp
                 return root
             else:  # 第五种情况：左右孩子节点都不为空，则将删除节点的左子树放到删除节点的右子树的最左面节点的左孩子的位置
