@@ -6,15 +6,6 @@ class TreeNode(object):
         self.right = right
 
 
-#
-# class MyTree(object):
-#     def __init__(self, root):
-#         self.root = TreeNode()
-#         self.dep = 0
-#     def construct(self, nums):
-#         for i in range(len(nums)):
-#             if self.root
-
 class Solution(object):
     def maxPathSum(self, root):
         """
